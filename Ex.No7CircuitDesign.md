@@ -45,12 +45,10 @@ half_adder(A, B, Sum, Carry) :-
 ```
 ### Output:
 OUTPUT FOR HALF ADDER:
-
-![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/e7fd8c1e-4754-4a07-a8f5-70d4bb8e81a3)
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/2baee3b7-49bb-472e-822f-c4fc9da837f7)
 
 OUTPUT FOR HALF SUBTRACTOR:
-
-![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/3cb07bd3-f2e7-492a-aaa8-6cc111e32954)
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/c7f7f470-44bf-42a4-a0a7-c35f0c6f1506)
 
 ### Result:
 Thus the truth table of circuit verified sucessfully.
