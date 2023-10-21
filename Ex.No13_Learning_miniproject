@@ -6,7 +6,38 @@ To write a program to train the classifier for -----------------.
 ###  Algorithm:
 
 ### Program:
+```
+(define (domain delivery_domain)
+  (:requirements :strips)
+  (:predicates
+    (at ?robot ?location)
+    (has-package ?robot ?package)
+    (at-goal ?package ?location)
+    (clear ?location)
+    (free ?robot)
+    (package-at ?package ?location)
+  )
+  
+  (:action move
+    :parameters (?robot ?from ?to)
+    :precondition (and (at ?robot ?from) (clear ?to) (free ?robot))
+    :effect (and (at ?robot ?to) (clear ?from))
+  )
 
+  (:action pick-up
+    :parameters (?robot ?package ?location)
+    :precondition (and (at ?robot ?location) (package-at ?package ?location) (free ?robot))
+    :effect (and (has-package ?robot ?package) (at ?robot ?location) (not (package-at ?package ?location)))
+  )
+
+  (:action drop-off
+    :parameters (?robot ?package ?location)
+    :precondition (and (at ?robot ?location) (has-package ?robot ?package) (at-goal ?package ?location) (free ?robot))
+    :effect (and (package-at ?package ?location) (clear ?location) (free ?robot) (not (has-package ?robot ?package)))
+  )
+)
+
+```
 
 ### Output:
 
