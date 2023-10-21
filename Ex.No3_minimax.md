@@ -13,6 +13,7 @@ Write a mini-max search algorithm to find the optimal value of MAX Player from t
 7. Min player find the minimum value by calling the minmax function recursively.
 8. Call the minimax function  and print the optimum value of Max player.
 9. Stop the program. 
+10.end.
 
 ### Program:
 ```
