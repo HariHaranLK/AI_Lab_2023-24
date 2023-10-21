@@ -4,15 +4,15 @@
 ### AIM: 
 To write the program to train the classifier for Simple delivery Robot Planner.
 ###  Algorithm:
-Step 1: Determine the robot's current location in the warehouse.
-Step 2: Identify the goal location where the package needs to be delivered.
-Step 3: Create a map of the warehouse layout, marking obstacles and paths.
-Step 4: Use the A* search algorithm to find the optimal path from the robot's current location to the goal while avoiding obstacles.
-Step 5: Break the path into individual movement steps.
-Step 6: Check for the next step in the path and move the robot accordingly.
-Step 7: Continuously update the robot's location.
-Step 8: If the robot encounters an obstacle, reevaluate the path to find an alternative route.
-Step 9: Repeat steps 6-8 until the robot reaches the goal location.
+Step 1: Determine the robot's current location in the warehouse. <br>
+Step 2: Identify the goal location where the package needs to be delivered. <br>
+Step 3: Create a map of the warehouse layout, marking obstacles and paths. <br>
+Step 4: Use the A* search algorithm to find the optimal path from the robot's current location to the goal while avoiding obstacles. <br>
+Step 5: Break the path into individual movement steps. <br>
+Step 6: Check for the next step in the path and move the robot accordingly. <br>
+Step 7: Continuously update the robot's location. <br>
+Step 8: If the robot encounters an obstacle, reevaluate the path to find an alternative route. <br>
+Step 9: Repeat steps 6-8 until the robot reaches the goal location. <br>
 Step 10: Once the robot reaches the goal, complete the package delivery. <br>
 ### Program:
 ```
