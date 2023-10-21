@@ -44,10 +44,10 @@ half_adder(A, B, Sum, Carry) :-
 
 ```
 ### Output:
-OUTPUT FOR HALF ADDER: <br>
+###OUTPUT FOR HALF ADDER: <br>
 ![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/2baee3b7-49bb-472e-822f-c4fc9da837f7)
 
-OUTPUT FOR HALF SUBTRACTOR: <br>
+###OUTPUT FOR HALF SUBTRACTOR: <br>
 ![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/c7f7f470-44bf-42a4-a0a7-c35f0c6f1506)
 
 ### Result:
