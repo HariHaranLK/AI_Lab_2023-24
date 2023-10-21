@@ -46,7 +46,7 @@ domain.pddl
 :effect (and (holding ?ob) (clear ?underob)
 (not (on ?ob ?underob)) (not (clear ?ob)) (not (arm-empty)))))
 ```
-Problem 1: Problem.pddl
+### Input1:
 ```
 (define (problem pb1)
 (:domain blocksworld)
@@ -58,7 +58,7 @@ Problem 1: Problem.pddl
 
 ![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/e91cb1fa-07c5-4a45-9ad9-35d314c4a625)
 
-Problem 2: Problem2.pddl
+### Input2:
 ```
 (define(problem pb3)
 (:domain blocksworld)
