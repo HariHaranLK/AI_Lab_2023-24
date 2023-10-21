@@ -12,7 +12,6 @@ Step 5:   Define a problem for Monkey Banana problem.<br>
 Step 6:  Obtain the plan for given problem.<br> 
 Step 7: Stop the program.<br> 
 ### Program:
-Domain:
 ```
 (define (domain monkey)
   (:requirements :strips)
