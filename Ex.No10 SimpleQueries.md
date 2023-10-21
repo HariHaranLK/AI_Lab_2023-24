@@ -34,7 +34,7 @@ food(chicken).
 food(peanuts).
 ```
 ### Output:
-![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/74b89b50-36ec-41c5-9ab7-79155a2b9095)
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/265dfcd5-b8f9-4583-a7e4-c07395814fbe)
 
 ### Task 2:
 Consider the following facts and represent them in predicate form: <br>              
