@@ -74,4 +74,4 @@ Step 10: Once the robot reaches the goal, complete the package delivery. <br>
 ![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/68eda73c-9e8d-4c9f-be6e-25d8be253dab)
 
 ### Result:
-Thus the plan was found for the initial and goal state of given problem.
+Thus the system was trained successfully and the prediction was carried out.
