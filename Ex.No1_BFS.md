@@ -42,6 +42,6 @@ bfs(visited, graph, '5')
 
 ![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/f466a893-7d1f-46db-a717-d3e72dc4a709)
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ### Result:
 Thus the breadth first search order was found sucessfully.
