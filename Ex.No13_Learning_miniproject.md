@@ -1,5 +1,5 @@
 # Ex.No: 13 Learning - Use Supervised Learning
-### DATE:                                                                            
+### DATE:28/10.2023
 ### REGISTER NUMBER: 212221040051
 ### AIM: 
 To write the program to train the classifier for Simple delivery Robot Planner.
