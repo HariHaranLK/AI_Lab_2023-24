@@ -32,11 +32,12 @@ def dfs(visited, graph, node):
 print("Following is the Depth-First Search")
 dfs(visited, graph, '5')
 ```
+<br><br>
 ### Output:
 
 ![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/3c544b47-7e18-43a2-98dc-ef0050b29465)
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 ### Result:
 Thus the Depth For Search was found successfully.
 Thus the depth first search order was found sucessfully.
