@@ -2,76 +2,71 @@
 ### DATE:28/10.2023
 ### REGISTER NUMBER: 212221040051
 ### AIM: 
-To write the program to train the classifier for Simple delivery Robot Planner.
+To write the program to train the classifier for Diabetes.
 ###  Algorithm:
-Step 1: Determine the robot's current location in the warehouse. <br>
-Step 2: Identify the goal location where the package needs to be delivered. <br>
-Step 3: Create a map of the warehouse layout, marking obstacles and paths. <br>
-Step 4: Use the A* search algorithm to find the optimal path from the robot's current location to the goal while avoiding obstacles. <br>
-Step 5: Break the path into individual movement steps. <br>
-Step 6: Check for the next step in the path and move the robot accordingly. <br>
-Step 7: Continuously update the robot's location. <br>
-Step 8: If the robot encounters an obstacle, reevaluate the path to find an alternative route. <br>
-Step 9: Repeat steps 6-8 until the robot reaches the goal location. <br>
-Step 10: Once the robot reaches the goal, complete the package delivery. <br>
+Step 1: Import packages
+Step 2: Get the data
+Step 3: Split the data
+Step 4: Scale the data
+Step 5: Instantiate model
+Step 6: Create a function for gradio
+Step 7: Print Result. <br>
 ### Program:
 ```
-(define (domain delivery_domain)
-  (:requirements :strips)
-  (:predicates
-    (at ?robot ?location)
-    (has-package ?robot ?package)
-    (at-goal ?package ?location)
-    (clear ?location)
-    (free ?robot)
-    (package-at ?package ?location)
-  )
-  
-  (:action move
-    :parameters (?robot ?from ?to)
-    :precondition (and (at ?robot ?from) (clear ?to) (free ?robot))
-    :effect (and (at ?robot ?to) (clear ?from))
-  )
+import numpy as np
+import pandas as pd
+pip install gradio
+pip install typing-extensions --upgrade
+pip install --upgrade typing
+pip install typing-extensions --upgrade
+import gradio as gr
+data = pd.read_csv('/content/diabetes.csv')
+data.head()
+print(data.columns)
+x = data.drop(['Outcome'], axis=1)
+y = data['Outcome']
+print(x[:5])
+#split data
+from sklearn.model_selection import train_test_split
 
-  (:action pick-up
-    :parameters (?robot ?package ?location)
-    :precondition (and (at ?robot ?location) (package-at ?package ?location) (free ?robot))
-    :effect (and (has-package ?robot ?package) (at ?robot ?location) (not (package-at ?package ?location)))
-  )
+x_train, x_test, y_train, y_test= train_test_split(x,y)
 
-  (:action drop-off
-    :parameters (?robot ?package ?location)
-    :precondition (and (at ?robot ?location) (has-package ?robot ?package) (at-goal ?package ?location) (free ?robot))
-    :effect (and (package-at ?package ?location) (clear ?location) (free ?robot) (not (has-package ?robot ?package)))
-  )
-)
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+x_train_scaled = scaler.fit_transform(x_train)
+x_test_scaled = scaler.fit_transform(x_test)
 
-```
-### Input 
-```
-(define (problem delivery_problem)
-  (:domain delivery_domain)
-  (:objects
-    robot1
-    package1
-    locationA
-    locationB
-  )
-  (:init
-    (at robot1 locationA)
-    (package-at package1 locationA)
-    (at-goal package1 locationB)
-    (clear locationB)
-    (clear locationA)
-    (free robot1)
-  )
-  (:goal (and (package-at package1 locationB) (clear locationB)))
-)
+from sklearn.neural_network import MLPClassifier
+model = MLPClassifier(max_iter=1000, alpha=1)
+model.fit(x_train, y_train)
+print("Model Accuracy on training set:", model.score(x_train, y_train))
+print("Model Accuracy on Test Set:", model.score(x_test, y_test))
 
+def diabetes(Pregnancies, Glucose, Blood_Pressure, SkinThickness, Insulin, BMI,Diabetes_Pedigree, Age):
+    x = np.array([Pregnancies,Glucose,Blood_Pressure,SkinThickness,Insulin,BMI,Diabetes_Pedigree,Age])
+    prediction = model.predict(x.reshape(1, -1))
+    if(prediction==0):
+      return "NO"
+    else:
+      return "YES"
+
+outputs = gr.Textbox()
+app = gr.Interface(fn=diabetes, inputs=['number','number','number','number','number','number','number','number'], outputs=outputs,description="Detection of Diabeties")
+app.launch(share=True)
 ```
 ### Output/Plan:
 
-![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/68eda73c-9e8d-4c9f-be6e-25d8be253dab)
+#### 1. Dataset
+
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/4d3e6867-bdb8-425a-a1c6-05360dd6c45b)
+
+#### 2. Accuracy
+
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/3a0aebe6-5a1c-4584-82e3-30374d374de7)
+
+#### 3. Output Result
+
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/476acd39-d3fd-42c3-abec-a691905c1927)
 
 ### Result:
 Thus the system was trained successfully and the prediction was carried out.
