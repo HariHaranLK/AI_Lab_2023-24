@@ -62,11 +62,11 @@ app.launch(share=True)
 
 #### 2. Accuracy
 
-![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/3a0aebe6-5a1c-4584-82e3-30374d374de7)
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/7b674df6-92ea-4656-8943-4128baccf034)
 
 #### 3. Output Result
 
-![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/476acd39-d3fd-42c3-abec-a691905c1927)
+![image](https://github.com/HariHaranLK/AI_Lab_2023-24/assets/132996089/4d0a13ed-30c0-4852-9ac9-86e849ffb9d5)
 
 ### Result:
 Thus the system was trained successfully and the prediction was carried out.
